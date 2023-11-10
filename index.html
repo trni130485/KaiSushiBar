@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kai Sushi Bar</title>
+
+<link href="https://fonts.cdnfonts.com/css/gang-of-three" rel="stylesheet">
+<style>
+@import url('https://fonts.cdnfonts.com/css/gang-of-three');
+</style>
+</head>
+<body>
+
+<!--First Section-->
+
+<!--Header-->
+<style type="text/css">
+	.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+</style>
+
+<header>
+	<a href="Home.html"><img src="KAI SUSHI.png" class="center" > </a>
+</header>
+
+
+<!--Line-->
+<style type="text/css">
+	/* Dotted lightgrey line */
+.hrtop {
+  border: 1px dotted #7d7c7c;
+  margin-bottom: 50px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+</style>
+
+<hr class="hrtop">
+
+
+<!--Top Navigation Bar-->
+<nav> 
+	<link rel="stylesheet" href="CssNav.css">
+	<div class="topnav">
+	
+  	<b><a class="active1" href="Home.html">HOME</a></b>
+  	<b><a href="Contact.html">CONTACT</a></b>
+  	<b><a href="About.html">ABOUT</a></b>
+	</div>
+</nav>
+
+
+<!--Main Body-->
+
+
+<!--Photos-->
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  margin-left: 3%;
+  margin-right: 3%;
+  position: relative;
+  margin-top: 100px;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="slide1.png" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="slide2.png" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <img src="slide3.png" style="width:100%">
+ 
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+
+<h1 style="
+  font-family: 'Gang of Three', sans-serif;
+  margin-top: 100px;                                          
+  font-size: 5em;
+    font-weight: 400;
+  text-align: center;">
+
+  DISCOVER KAI</h1>
+
+
+<style type="text/css">
+  .row {
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
+
+    
+}
+
+.column {
+  flex: 50%;
+  padding: 30px;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: Signika,sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.column:hover {
+opacity: 0.7;
+
+}
+.centered{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   
+}
+
+}
+</style>
+
+<div class="row">
+  <div class="column">
+    <a href="Contact.html"><img src="Contact.jpg" alt="Contact" style="width:100%"></a>
+    <div class="centered">CONTACT</div>
+  </div>
+  <div class="column">
+    <a href="About.html"> <img src="About.jpg" alt="About" style="width:100%"></a>
+    <div class="centered">ABOUT</div>
+  </div>
+</div> 
+
+<!--Footer-->
+<style type="text/css">
+  footer {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 100px;
+  }
+
+</style>
+
+<footer>
+  <img src="foot.png" 
+  style=" width: 100%;">
+</footer>
+
+
+
+
+
+</body>
+</html>
